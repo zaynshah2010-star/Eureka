@@ -1,0 +1,13 @@
+HOW TO PUT EUREKA ON NETLIFY (simple version)
+
+1. Get a free Groq key: console.groq.com/keys  (starts with gsk_)
+2. Put this whole folder on GitHub (new repository -> upload files). The key is NOT in these files.
+3. Netlify -> Add new site -> Import an existing project -> pick your GitHub repo -> Deploy.
+   (Don't drag-and-drop the folder; that skips the AI part.)
+4. Netlify -> Site configuration -> Environment variables -> Add variable
+      Name:  GROQ_API_KEY
+      Value: your gsk_ key
+5. Netlify -> Deploys -> Trigger deploy -> Deploy site.
+6. Test: open  https://YOUR-SITE.netlify.app/api/ai/health?test=all
+
+Google sign-in: add your Netlify address to the OAuth client's "Authorised JavaScript origins" (see README).
